@@ -35,7 +35,6 @@ export default function buildUseContextMenuTrigger(triggerVisible) {
     const handleMouseDown = event => {
       if (config.holdToDisplay >= 0 && event.button === MOUSE_BUTTON.LEFT) {
         event.persist();
-        event.stopPropagation();
 
         mouseDownTimeoutId.current = setTimeout(
           () => handleContextClick(event),
